@@ -1,0 +1,34 @@
+
+/*Alex Bowman
+ * in class loop exercise
+ */
+
+import java.util.Scanner;
+
+public class LPN {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		System.out.print("Enter a positive number: ");
+		int max = input.nextInt();
+		if (max < 0) {
+			System.out.println("Can't Do this problem.");
+			System.out.println("You can't follow directions.");
+		} else {
+			System.out.print("Enter a new positive number: ");
+			int num = input.nextInt();
+			
+			while (num >= 0) {
+				if (num > max)
+					max = num;
+				System.out.print("Enter a new positive number: ");
+				num = input.nextInt();
+			}
+			
+			System.out.println(max);
+			
+				input.close();
+			}
+
+		}
+	}
